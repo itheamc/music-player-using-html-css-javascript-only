@@ -10,7 +10,7 @@ const recentTime = document.getElementById('time');
 
 
 let isIndicatorVisible = false;
-let isLocked = false;
+let isLocked = true;
 let musicList = [];
 
 
@@ -23,24 +23,24 @@ const increaseVolume = () => {
     setTimeout(() => {
         volumeUp.style.left = '0px';
     }, 150)
-    
+
     if (isLocked == false) {
         if (isIndicatorVisible == false) {
             volumeIndicatorBorder.style.display = 'block';
             volumeIndicator.style.display = 'block';
             isIndicatorVisible = true;
-    
+
             setTimeout(() => {
                 volumeIndicatorBorder.style.display = 'none';
                 volumeIndicator.style.display = 'none';
                 isIndicatorVisible = false;
             }, 2000);
         }
-    
-    
+
+
         if (volumeIndicator.clientHeight < 134) {
             volumeIndicator.style.height = `${volumeIndicator.clientHeight + 10}px`;
-            music.volume = (music.volume + 0.035)%0.99;
+            music.volume = (music.volume + 0.035) % 0.99;
         } else {
             volumeIndicator.style.height = `${volumeIndicator.clientHeight + 21}px`;
             music.volume = 0.99;
@@ -58,21 +58,21 @@ const decresaeVolume = () => {
     setTimeout(() => {
         volumeDown.style.left = '0px';
     }, 150);
-    
+
     if (isLocked == false) {
         if (isIndicatorVisible == false) {
             volumeIndicatorBorder.style.display = 'block';
             volumeIndicator.style.display = 'block';
             isIndicatorVisible = true;
-    
+
             setTimeout(() => {
                 volumeIndicatorBorder.style.display = 'none';
                 volumeIndicator.style.display = 'none';
                 isIndicatorVisible = false;
             }, 2000);
         }
-         
-    
+
+
         if (volumeIndicator.clientHeight > 40) {
             volumeIndicator.style.height = `${volumeIndicator.clientHeight - 10}px`;
             music.volume = music.volume - 0.10;
@@ -96,7 +96,7 @@ powerRocker.addEventListener('click', () => {
         lockScreen.style.visibility = 'hidden';
         deviceScreen.style.visibility = 'visible';
         isLocked = false;
-        
+
     } else {
         mobileScreen.style.backgroundColor = '#052339';
         lockScreen.style.visibility = 'visible';
@@ -112,21 +112,21 @@ powerRocker.addEventListener('click', () => {
 
 // -------------------------------Function to fetch music------------------------
 const fetchSongs = () => {
-    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=hindi%20romantic%20songs", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "5e8881fe6emsh0453bf78dc85913p117103jsnfcae76429d85",
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-	}
-    })
-    .then(response => response.json())
-    .then(songs => {
-        musicList = songs.data;
-        console.log(musicList)
-    })
-    .catch(err => {
-        console.error(err);
-    });
+        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=english%20songs", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "5e8881fe6emsh0453bf78dc85913p117103jsnfcae76429d85",
+                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+            }
+        })
+        .then(response => response.json())
+        .then(songs => {
+            musicList = songs.data;
+            console.log(musicList)
+        })
+        .catch(err => {
+            console.error(err);
+        });
 }
 
 fetchSongs();
