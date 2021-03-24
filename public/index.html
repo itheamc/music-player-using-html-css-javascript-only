@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/player.js" defer></script>
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="screen-container" id="mobile-screen">
+            <div class="device-screen" id="device-screen">
+                <!-- Main functionality will be here -->
+                <!-- Music Player components -->
+                <div class="appbar" id="appbar">
+                    <div class="app-title">Music Player</div>
+                    <div class="option-menu"><i class="fas fa-ellipsis-v"></i></div>
+                </div>
+                <div class="app-container">
+                    <div class="cover-image" id="cover-image"></div>
+                    <div class="music-info-container">
+                        <div class="music-title"><marquee id="music-title">This is music title</marquee></div>
+                        <div class="music-artist" id="music-artist">Sonu Nigam</div>
+                    </div>
+                    <div class="controller-container">
+                        <div class="slider-container">
+                            <div class="music-duration-info">
+                                <span id="current-time">1:23</span>
+                                <span id="duration">5:00</span>
+                            </div>
+                            <div class="slider" id="slider">
+                                <div class="slider-indicator" id="slider-indicator"></div>
+                            </div>
+                        </div>
+                        <div class="controller">
+                            <div class="controller-btn" id="backward">
+                                <i class="fas fa-backward"></i>
+                            </div>
+                            <div class="controller-btn" id="play">
+                                <i class="fas fa-play" id="play-pause-fav"></i>
+                            </div>
+                            <div class="controller-btn" id="forward">
+                                <i class="fas fa-forward"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lock-screen" id="lock-screen">
+                <h1 id='time'></h1>
+                <h2 id="coder-info">CODE WITH ❤️ BY AMIT CHAUDHARY</h2>
+            </div>
+        </div>
+
+
+
+        <!-- ---------------These are for outer looks------------------- -->
+        <div class="punch-hole-camera">
+            <div class="dot"></div>
+        </div>
+        <div class="volume-up-down">
+            <div class="volume-up" id="volumeup"></div>
+            <div class="volume-down" id="volumedown"></div>
+            <div class="power-rocker" id="poweronoff"></div>
+        </div>
+        <div class="volume-level-indicator" id="volume-level-border"></div>
+        <div class="volume-level" id="volume-level"></div>
+        <audio src="" class="music" id="music"></audio>
+    </div>
+
+    
+</body>
+
+</html>

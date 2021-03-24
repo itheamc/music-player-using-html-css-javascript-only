@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.main-container {
+    width: 360px;
+    height: 768px;
+    border-radius: 24px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    padding: 6px 6px 32px 6px;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
+    background-color: #052339;
+    box-shadow: 1px 1px 15px -2px rgb(0, 0, 0);
+}
+
+
+.screen-container {
+    width: 100%;
+    height: 732px;
+    position: relative;
+    display: flex;
+    border-radius: 22px;
+    transition: all 0.3s linear ;
+}
+
+.device-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    visibility: hidden;
+    /* background-color: rgba(255, 255, 255, 0.85); */
+}
+
+
+/* ______________________________Lock Screen________________________ */
+.lock-screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background-color: #052339;
+}
+
+#time {
+    font-size: 36px;
+    font-family: monospace;
+    color: rgba(216, 191, 216, 0.411);
+}
+
+#coder-info {
+    position: absolute;
+    bottom: 4px;
+    font-size: xx-small;
+    font-family: monospace;
+    color: rgba(216, 191, 216, 0.6);
+}
+
+.punch-hole-camera {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 4px;
+    border: 2px solid rgba(68, 68, 68, 0.753);
+    border-radius: 50%;
+}
+
+.dot {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.795);
+    box-shadow: 1px 1px 10px 2px rgb(95, 95, 95);
+}
+
+.volume-up-down {
+    width: 10px;
+    height: 220px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    top: 120px;
+    right: -2px;
+    /* background-color: chartreuse; */
+}
+
+.volume-up, .volume-down, .power-rocker {
+    width: 3px;
+    height: 50px;
+    background-color:#052339;
+    box-shadow: 1px 1px 15px -2px rgb(0, 0, 0);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+    transition: left 0.1s linear;
+}
+
+.power-rocker {
+    margin-top: 50px;
+}
+
+.volume-level-indicator, .volume-level {
+    display: none;
+    position: absolute;
+    border-radius: 50px;
+    transition: all 0.2s linear;
+}
+
+
+.volume-level-indicator {
+    width: 40px;
+    height:150px;
+    right: 10px;
+    bottom: 50%;
+    border: 2px solid rgb(147, 113, 241);
+    z-index: 1;
+}
+
+.volume-level {
+    width: 36px;
+    height: 30px;
+    max-height: 147px;
+    right: 12px;
+    bottom: 50.1%;
+    background-color: rgb(147, 113, 241);
+    border: 2px solid transparent;
+}
+
+
+/* _______________________MUSIC PLAYER STYLING__________________________ */
+
+/* .device-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ____________________AppBar Styling________________ */
+.appbar {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px 0 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: mediumvioletred;
+}
+
+.app-title {
+    font-size: 18px;
+    font-family:monospace;
+    color: thistle;
+    font-weight: 900;
+}
+.option-menu {
+    font-size: 12px;
+    color: thistle;
+}
+
+/* _______________________Cover Image Styling_____________________ */
+.cover-image {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+/* ____________________Music-Info Container Styling__________________ */
+.music-info-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-title {
+    font-size: 24px;
+    font-family:monospace;
+    color:mediumvioletred;
+    font-weight: 900;
+    text-align: center;
+}
+
+.music-artist {
+    font-size: 16px;
+    font-family:monospace;
+    color:mediumvioletred;
+    font-style: italic;
+    text-align: center;
+}
+
+/* _______________________Controller-container Styling_____________________ */
+
+.controller-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* _______________________Slider Styling_____________________ */
+.slider-container {
+    width: 90%;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: indianred; */
+    position: relative;
+}
+
+.music-duration-info {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: smaller;
+    color: mediumvioletred;
+    font-family:monospace;
+}
+
+.slider {
+    width: 90%;
+    height: 4px;
+    border-radius: 16px;
+    background-color:mediumvioletred;
+
+}
+
+.slider-indicator {
+    width: 0;
+    height: 100%;
+    background-color: chartreuse;
+}
+
+/* ____________Music Controller Button Styling__________________ */
+.controller {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.controller-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#play {
+    background-color:deeppink;
+    color: gainsboro;
+}
+
+
