@@ -127,6 +127,10 @@ body {
     margin-top: 50px;
 }
 
+.volume-up:hover, .volume-down:hover, .power-rocker:hover {
+    cursor: pointer;
+}
+
 .volume-level-indicator, .volume-level {
     display: none;
     position: absolute;
@@ -200,6 +204,10 @@ body {
     color: thistle;
 }
 
+.option-menu:hover {
+    cursor: pointer;
+}
+
 /* _______________________Cover Image Styling_____________________ */
 .cover-image {
     width: 200px;
@@ -210,7 +218,7 @@ body {
 
 /* ____________________Music-Info Container Styling__________________ */
 .music-info-container {
-    width: 90%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -219,6 +227,7 @@ body {
 }
 
 .music-title {
+    width: 100%;
     font-size: 24px;
     font-family:monospace;
     color:mediumvioletred;
@@ -273,14 +282,18 @@ body {
     width: 90%;
     height: 4px;
     border-radius: 16px;
-    background-color:mediumvioletred;
+    background-color:floralwhite;
+}
 
+.slider:hover {
+    cursor: pointer;
 }
 
 .slider-indicator {
     width: 0;
     height: 100%;
-    background-color: chartreuse;
+    background-color:mediumvioletred;
+
 }
 
 /* ____________Music Controller Button Styling__________________ */
@@ -300,6 +313,10 @@ body {
     align-items: center;
     border-radius: 50%;
     transition: all 0.3s linear;
+}
+
+.controller-btn:hover {
+    cursor: pointer;
 }
 
 #play {
