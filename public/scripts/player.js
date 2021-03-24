@@ -99,8 +99,9 @@ const updateProgress = (cur_t, dur) => {
     // console.log(progressIndicator.clientWidth);
 }
 
+// Adding timeupdate event listener in music
 music.addEventListener('timeupdate', (event) => {
-    const {currentTime, duration} = event.srcElement;
+    const {currentTime, duration} = event.target;
     // console.log(currentTime)
     if(duration) {
         setDuration(duration)
@@ -111,3 +112,11 @@ music.addEventListener('timeupdate', (event) => {
         nextSong();
     }
 });
+
+
+// Adding on click listener on the progress
+progress.addEventListener('click', (event) => {
+    const offset_x = event.offsetX;
+    const {clientWidth} = event.target;
+    music.currentTime = musicDur *(offset_x/clientWidth);
+})
