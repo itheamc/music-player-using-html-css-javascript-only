@@ -50,16 +50,20 @@ const pauseMusic  = () => {
 
 // Function to handle the forward button
 const nextSong = () => {
-    isPlaying = false;
+    pauseMusic();
     index = (index + 1) % musicList.length; 
-    loadMusic();
+    setTimeout(() => {
+        loadMusic();
+    }, 300);
 }
 
 // Function to handle the previous button
 const previousSong = () => {
-    isPlaying = false;
-    index = index == 0 ? musicList.length-1 : ((index - 1) % musicList.length); 
-    loadMusic();
+    pauseMusic();
+    index = index == 0 ? musicList.length-1 : ((index - 1) % musicList.length);
+    setTimeout(() => {
+        loadMusic();
+    }, 300);
 }
 
 // -----------Listening Click Event on PlayPause Button to play pause the music
