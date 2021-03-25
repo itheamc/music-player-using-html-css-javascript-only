@@ -7,6 +7,7 @@ const mobileScreen = document.getElementById('mobile-screen');
 const deviceScreen = document.getElementById('device-screen');
 const lockScreen = document.getElementById('lock-screen');
 const recentTime = document.getElementById('time');
+const statusTime = document.getElementById('status-time');
 
 
 let isIndicatorVisible = false;
@@ -172,6 +173,9 @@ const updateRecentTime = () => {
         s = date.getSeconds();
     }
     recentTime.innerText = `${h}:${m}:${s}`;
+    statusTime.innerText = `${h > 12 ? (h-12) : h}:${m} ${h > 12 ? 'PM' : 'AM'}`;
 }
+
+// for status time
 
 setInterval(updateRecentTime, 1000);
