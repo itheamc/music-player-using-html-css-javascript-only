@@ -109,6 +109,23 @@ powerRocker.addEventListener('click', () => {
 })
 
 
+// Implementation of the double tap functionality
+let tapTimes = 0;
+lockScreen.addEventListener('click', () => {
+    tapTimes += 1;
+    if (tapTimes == 2) {
+        mobileScreen.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+        lockScreen.style.visibility = 'hidden';
+        deviceScreen.style.visibility = 'visible';
+        isLocked = false;
+        tapTimes = 0;
+        return
+    } 
+
+    setTimeout(() => {
+        tapTimes = 0;
+    }, 500)
+})
 
 // -------------------------------Function to fetch music------------------------
 const fetchSongs = () => {
