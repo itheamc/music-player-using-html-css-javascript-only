@@ -179,6 +179,62 @@ body {
     align-items: center;
 }
 
+/*_______________ status bar css styling _______________*/
+.status-bar {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: mediumvioletred;
+}
+
+.status-bar .status-time {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: thistle;
+    font-size: 10px;
+    font-family: monospace;
+    border-top-left-radius: 20px;
+    padding-left: 16px;
+}
+
+.status-bar .icons {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    border-top-right-radius: 20px;
+    padding-right: 16px;
+}
+
+.status-bar .fas {
+    color: thistle;
+    font-size: 8px;
+    margin-left: 6px;
+}
+
+.status-bar .fa-music {
+    margin-right: 4px;
+}
+
+.status-bar .fa-wifi {
+    margin-right: 4px;
+}
+
+.status-bar .fa-battery-three-quarters {
+    font-size: small;
+}
+
 /* ____________________AppBar Styling________________ */
 .appbar {
     width: 100%;
@@ -188,8 +244,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    
     background-color: mediumvioletred;
 }
 
