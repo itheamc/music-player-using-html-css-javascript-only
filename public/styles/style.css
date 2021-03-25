@@ -214,6 +214,7 @@ body {
     height: 200px;
     background-color: grey;
     border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 /* ____________________Music-Info Container Styling__________________ */
